@@ -18,9 +18,10 @@ group :assets do
   gem 'bootstrap-sass', '2.0.0'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
+  gem 'bcrypt-ruby', '3.0.1'
+  gem 'sass-rails',   '3.2.4'
 end
 
-gem 'sass-rails',   '3.2.4'
 gem 'jquery-rails', '2.0.0'
 
 # Test gems on Linux
