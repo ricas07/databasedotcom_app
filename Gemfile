@@ -9,13 +9,13 @@ group :development do
   gem 'guard-rspec', '0.5.5'
   gem 'bcrypt-ruby', '3.0.1'
   
-  #for salesforce
-  gem "asf-soap-adapter", :require => 'activerecord-activesalesforce-adapter'
-  gem 'databasedotcom'
-  gem 'rforcedotcom'
-  gem 'facets', '2.8.4', :require=>false
-  gem 'activerecord-activesalesforce-adapter'
-  #end salesforce
+# for salesforce
+#  gem "asf-soap-adapter", :require => 'activerecord-activesalesforce-adapter'
+#  gem 'databasedotcom'
+#  gem 'rforcedotcom'
+#  gem 'facets', '2.8.4', :require=>false
+#  gem 'activerecord-activesalesforce-adapter'
+# end salesforce
 end
 
 gem 'annotate', '~> 2.4.1.beta', group: :development
