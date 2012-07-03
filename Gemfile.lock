@@ -191,7 +191,6 @@ DEPENDENCIES
   capybara (= 1.1.2)
   coffee-rails (= 3.2.2)
   databasedotcom
-  facets (= 2.8.4)
   factory_girl_rails (= 1.4.0)
   guard-rspec (= 0.5.5)
   guard-spork (= 0.3.2)

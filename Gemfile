@@ -9,14 +9,14 @@ group :development do
   gem 'guard-rspec', '0.5.5'
   gem 'bcrypt-ruby', '3.0.1'
   
-  #for salesforce
-  gem 'asf-soap-adapter', :require => 'activerecord-activesalesforce-adapter'
+  # For Salesforce but this may not work... checking it out.
+  # gem 'asf-soap-adapter', :require => 'activerecord-activesalesforce-adapter'
   # I don't know why the above ^^ works, while the following line throws an error
   # gem 'activerecord-activesalesforce-adapter', :require => 'activerecord-activesalesforce-adapter'
-  gem 'databasedotcom'
-  gem 'rforcedotcom'
-  gem 'facets', '2.8.4', :require => false
-  #end salesforce
+  # gem 'databasedotcom'
+  # gem 'rforcedotcom'
+  # gem 'facets', :require => false
+  # end salesforce
 end
 
 gem 'annotate', '~> 2.4.1.beta', group: :development
