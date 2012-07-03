@@ -10,11 +10,12 @@ group :development do
   gem 'bcrypt-ruby', '3.0.1'
   
   #for salesforce
-  gem "asf-soap-adapter", :require => 'activerecord-activesalesforce-adapter'
+  gem 'asf-soap-adapter', :require => 'activerecord-activesalesforce-adapter'
+  # I don't know why the above ^^ works, while the following line throws an error
+  # gem 'activerecord-activesalesforce-adapter', :require => 'activerecord-activesalesforce-adapter'
   gem 'databasedotcom'
   gem 'rforcedotcom'
-  gem 'facets', '2.8.4', :require=>false
-  gem 'activerecord-activesalesforce-adapter'
+  gem 'facets', '2.8.4', :require => false
   #end salesforce
 end
 

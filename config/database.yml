@@ -10,7 +10,7 @@ development:
   timeout: 5000
 
 salesforce-default-realm:
-  adapter: activerecord-activesalesforce-adapter
+  adapter: activesalesforce
   url: https://test.salesforce.com
   username: ricas071340318457207@gmail.com
   password: P@ssword1fgBfS3P0N5B97VQf2SfiW2Q8M
