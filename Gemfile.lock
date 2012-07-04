@@ -25,9 +25,6 @@ GEM
     activeresource (3.2.6)
       activemodel (= 3.2.6)
       activesupport (= 3.2.6)
-    activesalesforce (1.1.6)
-      builder (>= 1.2.4)
-      rails (>= 1.0.0)
     activesupport (3.2.6)
       i18n (~> 0.6)
       multi_json (~> 1.0)
@@ -53,6 +50,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.3.3)
+    databasedotcom (1.3.1)
+      json
+      multipart-post (~> 1.1)
+    databasedotcom-rails (1.1.0)
+      databasedotcom
     diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -91,6 +93,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.6)
+    multipart-post (1.1.5)
     nokogiri (1.5.4)
     pg (0.12.2)
     polyglot (0.3.3)
@@ -170,12 +173,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesalesforce
   annotate (~> 2.4.1.beta)
   bcrypt-ruby (= 3.0.1)
   bootstrap-sass (= 2.0.0)
   capybara (= 1.1.2)
   coffee-rails (= 3.2.2)
+  databasedotcom
+  databasedotcom-rails
   factory_girl_rails (= 1.4.0)
   guard-rspec (= 0.5.5)
   guard-spork (= 0.3.2)

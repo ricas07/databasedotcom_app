@@ -8,7 +8,10 @@ group :development do
   gem 'bootstrap-sass', '2.0.0'
   gem 'guard-rspec', '0.5.5'
   gem 'bcrypt-ruby', '3.0.1'
-  gem 'activesalesforce'
+
+  gem 'databasedotcom'
+  gem 'databasedotcom-rails'
+  
   # For Salesforce but this may not work... checking it out.
   # gem 'asf-soap-adapter', :require => 'activerecord-activesalesforce-adapter'
   # I don't know why the above ^^ works, while the following line throws an error
@@ -16,6 +19,7 @@ group :development do
   # gem 'databasedotcom'
   # gem 'rforcedotcom'
   # gem 'facets', :require => false
+  # gem 'activesalesforce'
   # end salesforce
 end
 
