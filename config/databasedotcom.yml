@@ -1,7 +1,7 @@
 host: login.salesforce.com        # Use test.salesforce.com for sandbox
 client_secret: 5587993940227999074         # This is the Consumer Secret from Salesforce
 client_id: 3MVG9y6x0357Hledlw0Op2Vcbey_xXD3gqwk.D9ApXFeNioQCOda082RjQegBOrMyJ4CispsJoJyDAFbc6dIR     # This is the Consumer Key from Salesforce
-sobject_module: SFDC_Models       # See below for details on using modules
+# sobject_module: SFDC_Models       # See below for details on using modules
 debugging: true                   # Can be useful while developing
 username: ricas071340318457207@gmail.com
 password: P@ssword1fgBfS3P0N5B97VQf2SfiW2Q8M

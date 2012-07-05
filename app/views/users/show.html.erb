@@ -1,11 +1,5 @@
-<% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-</div>
+<h1>User <%= @user.Name %></h1>
+
+<% @user.attributes.each do |a| %>
+    <%= a[0] %>: <%= a[1] %><br/>
+<% end %>

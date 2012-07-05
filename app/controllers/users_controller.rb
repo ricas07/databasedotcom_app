@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   include Databasedotcom::Rails::Controller
   
   def index
-    @users = Users.all()[1..19]
+    @users = User.all()[0..19]
   end
 
   def new
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def create
