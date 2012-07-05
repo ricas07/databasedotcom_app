@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  include Databasedotcom::Rails::Controller
+  
+  def index
+    @users = Users.all()[1..19]
+  end
+
   def new
     @user = User.new
   end
