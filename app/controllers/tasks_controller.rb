@@ -10,7 +10,7 @@ class TasksController < ApplicationController
     task.IsRecurrence = false
     task.IsReminderSet = false
     task.Priority = "Normal"
-    user = SFDC_Models::User.first
+    user = SFDC_Models::User#.first
     task.OwnerId = user.Id
     if (task.save)
       redirect_to(task, :notice => 'Task was successfully created.')
