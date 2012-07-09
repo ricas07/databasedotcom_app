@@ -2,3 +2,9 @@
 <%= link_to 'Back', tasks_path %> 
 <br/>
 <br/>
+
+<ul>
+<% @tasks.each do |task| %>
+	<li><%= task.Id %></li>
+<% end %>
+</ul>
