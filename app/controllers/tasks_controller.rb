@@ -20,4 +20,25 @@ class TasksController < ApplicationController
   def index
     @tasks = Task.all 
   end
+
+  def show  
+    @task = Task.find(params[:Id]) 
+  end
+
+  def edit
+    @task = Task.find(params[:Id])
+  end
+
+  def update
+    @task = Task.find(params[:Id])
+    @task.update_attributes(params[:task])
+    render "show"
+  end
+
+  def destroy
+    task = Task.find(params[:Id])
+    task.delete
+    redirect_to(tasks_path, :notice => "Task '#{task.Subject}' was successfully deleted.")
+  end
+
 end 

@@ -1,10 +1,10 @@
 <%= link_to 'New', new_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %> 
+<%= link_to 'Back', tasks_path %> 	
 <br/>
 <br/>
 
 <ul>
 <% @tasks.each do |task| %>
-	<li><%= task.Id %></li>
+	<li><%= link_to "#{task.Id}", task %></li>
 <% end %>
 </ul>
