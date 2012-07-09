@@ -1,4 +1,4 @@
-<h1>Editing Task  <%= @task.Id %> </h1>
+<h1>Editing Task  <%= @task.id %> </h1>
 
 <%= form_for @task do |f| %>
     <div class="field">
@@ -12,5 +12,5 @@
 
 <br/>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Show', @task %> |
+<%= link_to 'Back', tasks_path %>
