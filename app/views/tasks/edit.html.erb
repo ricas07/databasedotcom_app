@@ -1,9 +1,13 @@
-<h1>Editing Task  <%= @task.id %> </h1>
+<h1>Editing Task  <%= @task.Id %> </h1>
 
 <%= form_for @task do |f| %>
     <div class="field">
         <%= f.label :Subject %><br />
         <%= f.text_field :Subject %>
+    </div>
+    <div class="field">
+    	<%= f.label :Status %><br />
+        <%= f.select :Status, options_for_select([['Not Started', 'Not Started'], ['In Progress', 'In Progress'], ['Completed','Completed']]) %>
     </div>
     <div class="actions">
         <%= f.submit %>
@@ -13,4 +17,5 @@
 <br/>
 
 <%= link_to 'Show', @task %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Back', tasks_path %> |
+<%= link_to 'Delete', @task, :confirm => 'Are you sure?', :method => :delete %>

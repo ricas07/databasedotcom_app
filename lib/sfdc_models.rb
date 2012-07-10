@@ -6,5 +6,6 @@ module SFDC_Models
 
 	client.sobject_module = "SFDC_Models"
     client.materialize("User")
+    #client.materialize("Wifi__c") Don't need to materialize this since I don't have a local object with the same name.
 
 end	

@@ -32,7 +32,7 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     @task.update_attributes(params[:task])
-    render "show"
+    redirect_to(tasks_path, :notice => "Task '#{@task.Subject}' was successfully updated.")
   end
 
   def destroy
