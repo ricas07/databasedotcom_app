@@ -5,7 +5,7 @@ module SFDC_Models
     client.authenticate :username => "ricas071340318457207@gmail.com", :password => "P@ssword1fgBfS3P0N5B97VQf2SfiW2Q8M"
 
 	client.sobject_module = "SFDC_Models"
-    client.materialize("User")
-    #client.materialize("Wifi__c") Don't need to materialize this since I don't have a local object with the same name.
+    client.materialize("User") 
+    # client.materialize("Wifi__c")  :as => "Wifi"
 
 end	

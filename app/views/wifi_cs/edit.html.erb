@@ -1,0 +1,17 @@
+<h1>Editing wifi  <%= @wifi.Id %> </h1>
+
+<%= form_for @wifi do |f| %>
+    <div class="field">
+        <%= f.label :Name %><br />
+        <%= f.text_field :Name %>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>
+
+<br/>
+
+<%= link_to 'Show', @wifi %> |
+<%= link_to 'Back', wifi__cs_path %> |
+<%= link_to 'Delete', @wifi, :confirm => 'Are you sure?', :method => :delete %>

@@ -1,0 +1,10 @@
+<h1>wifi_setup <%= @wifi.Id %></h1>
+
+<%= link_to 'Edit', edit_wifi__c_path %> |
+<%= link_to 'Back', wifi__cs_path %>
+<br/>
+<br/>
+
+<% @wifi.attributes.each do |a| %>
+    <%= a[0] %>: <%= a[1] %><br/>
+<% end %>
