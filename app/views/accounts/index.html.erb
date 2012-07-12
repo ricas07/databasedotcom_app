@@ -1,0 +1,23 @@
+<% if flash[:notice] %>
+  <%= flash[:notice] %><br/><br/>
+<% end %>
+
+<%= link_to 'New', new_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %> 	
+<br/>
+<br/>
+
+<div class="row">
+<table class="table">
+<tr>
+	<th>account ID</th>
+	<th>Subject</th>
+	<th>Status</th>
+</tr>
+<% @accounts.each do |account| %>
+	<tr>
+	<td><%= link_to "#{account.Id}", account %></td><td><%= "#{account.Name}" %></td><td></td>
+	</tr>
+<% end %>
+</table>
+</div>

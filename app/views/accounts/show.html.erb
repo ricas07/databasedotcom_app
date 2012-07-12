@@ -1,7 +1,7 @@
-<h1>Task <%= @task.Id %></h1>
+<h1>Account <%= @account.Name %></h1>
 
-<%= link_to 'Edit', edit_task_path %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Edit', edit_account_path %> |
+<%= link_to 'Back', accounts_path %>
 <br/>
 <br/>
 <table class="table">
@@ -9,7 +9,7 @@
 		<th>Attribute</th>
 		<th>Value</th>
 	</tr>
-<% @task.attributes.each do |a| %>
+<% @account.attributes.each do |a| %>
     <tr>
     	<td><%= a[0] %>:</td><td><%= a[1] %></td>
     </tr>

@@ -7,11 +7,19 @@
 <br/>
 <br/>
 
-<ul>
-
+<div class="row">
+<table class="table">
+<tr>
+	<th>Task ID</th>
+	<th>Subject</th>
+	<th>Status</th>
+</tr>
 <% @tasks.each do |task| %>
 <% if task.Status != "Completed" %>
-	<li>ID: <%= link_to "#{task.Id}", task %> Subject: <%= "#{task.Subject}" %> Status: <%= "#{task.Status}" %></li>
+	<tr>
+	<td><%= link_to "#{task.Id}", task %></td><td><%= "#{task.Subject}" %></td><td><%= "#{task.Status}" %></td>
+	</tr>
 <% end %>
 <% end %>
-</ul>
+</table>
+</div>
