@@ -20,7 +20,10 @@ class AccountsController < ApplicationController
   end
 
   def index
-    @accounts = Account.all 
+    @accounts = Account.all
+    account = Account.find(params[:id])
+    @account_owner = SFDC_Models::User.find_by_id("#{account.OwnerId}")
+
   end
 
   def show  

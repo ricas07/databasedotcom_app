@@ -1,5 +1,5 @@
 <% if flash[:notice] %>
-  <%= flash[:notice] %><br/><br/>
+  <% flash[:notice] %><br/><br/>
 <% end %>
 
 <%= link_to 'New', new_task_path(@task) %> |

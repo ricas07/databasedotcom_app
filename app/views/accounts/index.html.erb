@@ -1,5 +1,5 @@
 <% if flash[:notice] %>
-  <%= flash[:notice] %><br/><br/>
+  <% flash[:notice] %><br/><br/>
 <% end %>
 
 <%= link_to 'New', new_account_path(@account) %> |
@@ -10,13 +10,19 @@
 <div class="row">
 <table class="table">
 <tr>
-	<th>account ID</th>
+	<th>Account ID</th>
 	<th>Subject</th>
-	<th>Status</th>
+	<th>Account Owner</th>
+	<th>Created Date</th>
+	<th>Last Modified</th>
 </tr>
 <% @accounts.each do |account| %>
 	<tr>
-	<td><%= link_to "#{account.Id}", account %></td><td><%= "#{account.Name}" %></td><td></td>
+	<td><%= link_to "#{account.Id}", account %></td>
+	<td><%= "#{account.Name}" %></td>
+	<td><%= SFDC_Models::User.find_by_id("#{account.OwnerId}").Name %></td>
+	<td><%= "#{account.CreatedDate}" %></td>
+	<td><%= "#{account.LastModifiedDate}" %></td>
 	</tr>
 <% end %>
 </table>

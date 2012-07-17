@@ -6,6 +6,5 @@ module SFDC_Models
 
 	client.sobject_module = "SFDC_Models"
     client.materialize("User") 
-    # client.materialize("Wifi__c")  :as => "Wifi"
 
 end	

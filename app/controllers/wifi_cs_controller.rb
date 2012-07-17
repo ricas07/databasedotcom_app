@@ -11,7 +11,18 @@ class WifiCsController < ApplicationController
 
    def new
      @wifi = Wifi__c.new
-   end  
+   end
+
+   def create
+    wifi__c = Wifi__c.new(params[:wifi__c])
+    user = SFDC_Models::User.first
+    wifi__c.OwnerId = user.Id
+    #wifi__c.RecordTypeId = "012E0000000Q0WVIA0"
+    #wifi__c.RecordType = "Account"
+    if (wifi__c.save)
+      redirect_to(wifi__cs_path, :notice => "Wifi '#{@wifi.Name}' was successfully created.")
+    end
+  end  
 
    def edit
      @wifi = Wifi__c.find(params[:id])
