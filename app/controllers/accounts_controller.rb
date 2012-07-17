@@ -6,12 +6,14 @@ class AccountsController < ApplicationController
   end
 
   def create
-    account = Account.new(params[:Account])
-    #Account.IsRecurrence = false
-    #Account.IsReminderSet = false
-    #Account.Priority = "Normal"
-    #user = SFDC_Models::User.first
-    #Account.OwnerId = user.Id
+    account = Account.new(params[:account])
+    #account.IsRecurrence = false
+    #account.IsReminderSet = false
+    #account.Priority = "Normal"
+    user = SFDC_Models::User.first
+    account.OwnerId = user.Id
+    account.RecordTypeId = "012E0000000Q0WVIA0"
+    account.RecordType = "Account"
     if (account.save)
       redirect_to(accounts_path, :notice => 'Account was successfully created.')
     end
@@ -32,13 +34,13 @@ class AccountsController < ApplicationController
   def update
     @account = Account.find(params[:id])
     @account.update_attributes(params[:account])
-    redirect_to(Accounts_path, :notice => "Account '#{@account.Subject}' was successfully updated.")
+    redirect_to(accounts_path, :notice => "Account '#{@account.Name}' was successfully updated.")
   end
 
   def destroy
     account = Account.find(params[:Id])
     account.delete
-    redirect_to(accounts_path, :notice => "Account '#{account.Subject}' was successfully deleted.")
+    redirect_to(accounts_path, :notice => "Account '#{account.Name}' was successfully deleted.")
   end
 
 end 

@@ -1,13 +1,9 @@
-<h1>Create task</h1>
+<h1>Create account</h1>
 
-<%= form_for @task do |f| %>
+<%= form_for @account do |f| %>
     <div class="field">
-        <%= f.label :Subject %><br />
-        <%= f.text_field :Subject %>
-    </div>
-    <div class="field">
-        <%= f.label "Status" %>
-        <%= f.select :Status, options_for_select([['Not Started', 'Not Started'], ['In Progress', 'In Progress'], ['Completed','Completed']]) %>
+        <%= f.label :Name %><br />
+        <%= f.text_field :Name %>
     </div>
     <div class="actions">
         <%= f.submit %>
@@ -16,4 +12,4 @@
 
 <br/>
 
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Back', accounts_path %>
