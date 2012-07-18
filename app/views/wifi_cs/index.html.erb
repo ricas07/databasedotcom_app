@@ -1,0 +1,29 @@
+<% if flash[:notice] %>
+  <% flash[:notice] %><br/><br/>
+<% end %>
+
+<%= link_to 'New', new_wifi__c_path(@wifis) %> |
+<%= link_to 'Back', wifi__cs_path %> 	
+<br/>
+<br/>
+
+<table class="table">
+<tr>
+	<th>Wifi ID</th>
+	<th>Name</th>
+	<th>Wifi Owner</th>
+	<th>Created Date</th>
+	<th>Last Modified</th>
+</tr>
+
+<% @wifis.each do |wifi| %>
+<tr>
+	<td><%= link_to "#{wifi.Id}", wifi %></td>
+	<td><%= "#{wifi.Name}" %></td>
+	<td><%= SFDC_Models::User.find_by_id("#{wifi.OwnerId}").Name %></td>
+	<td><%= "#{wifi.CreatedDate}" %></td>
+	<td><%= "#{wifi.LastModifiedDate}" %></td>
+</tr>
+<% end %>
+</table>
+</ul>

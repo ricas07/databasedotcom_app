@@ -1,0 +1,17 @@
+<h1>Account <%= @account.Name %></h1>
+
+<%= link_to 'Edit', edit_account_path %> |
+<%= link_to 'Back', accounts_path %>
+<br/>
+<br/>
+<table class="table">
+	<tr>
+		<th>Attribute</th>
+		<th>Value</th>
+	</tr>
+<% @account.attributes.each do |a| %>
+    <tr>
+    	<td><%= a[0] %>:</td><td><%= a[1] %></td>
+    </tr>
+<% end %>
+</table>

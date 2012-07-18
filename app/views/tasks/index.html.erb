@@ -1,0 +1,25 @@
+<% if flash[:notice] %>
+  <% flash[:notice] %><br/><br/>
+<% end %>
+
+<%= link_to 'New', new_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %> 	
+<br/>
+<br/>
+
+<div class="row">
+<table class="table">
+<tr>
+	<th>Task ID</th>
+	<th>Subject</th>
+	<th>Status</th>
+</tr>
+<% @tasks.each do |task| %>
+<% if task.Status != "Completed" %>
+	<tr>
+	<td><%= link_to "#{task.Id}", task %></td><td><%= "#{task.Subject}" %></td><td><%= "#{task.Status}" %></td>
+	</tr>
+<% end %>
+<% end %>
+</table>
+</div>
