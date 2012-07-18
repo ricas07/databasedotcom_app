@@ -8,13 +8,20 @@ group :development do
   gem 'bootstrap-sass', '2.0.0'
   gem 'guard-rspec', '0.5.5'
   gem 'bcrypt-ruby', '3.0.1'
-end
 
-# Salesforce Gems required to access Salesforce Objects
-# Look in lib/sfdc_models.rb to materialize sf objects
   gem 'databasedotcom'
   gem 'databasedotcom-rails'
-
+  
+  # For Salesforce but this may not work... checking it out.
+  # gem 'asf-soap-adapter', :require => 'activerecord-activesalesforce-adapter'
+  # I don't know why the above ^^ works, while the following line throws an error
+  # gem 'activerecord-activesalesforce-adapter', :require => 'activerecord-activesalesforce-adapter'
+  # gem 'databasedotcom'
+  # gem 'rforcedotcom'
+  # gem 'facets', :require => false
+  # gem 'activesalesforce'
+  # end salesforce
+end
 
 gem 'annotate', '~> 2.4.1.beta', group: :development
 
