@@ -3,7 +3,12 @@ SampleApp::Application.routes.draw do
   resources :tasks
   resources :wifis
   resources :wifi__cs
-  resources :accounts
+  #resources :accounts
+  resources :accounts do
+    collection do
+      get :search
+    end
+  end
   resources :sessions, only: [:new, :create, :destroy]
 
   root to: 'static_pages#home'
