@@ -1,5 +1,5 @@
 class WifiCsController < ApplicationController
-  include Databasedotcom::Rails::Controller
+  #include Databasedotcom::Rails::Controller
     
    def index
      @wifis = Wifi__c.all()[0..19]

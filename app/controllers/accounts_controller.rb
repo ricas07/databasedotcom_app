@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  include Databasedotcom::Rails::Controller
+  #include Databasedotcom::Rails::Controller
 
   def new
     @account = Account.new
