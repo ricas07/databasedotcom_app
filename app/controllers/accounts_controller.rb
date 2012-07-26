@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
-  #include Databasedotcom::Rails::Controller
+  include Databasedotcom::Rails::Controller
+  before_filter :signed_in_user
 
   def new
     @account = Account.new
@@ -52,5 +53,14 @@ class AccountsController < ApplicationController
     account.delete
     redirect_to(accounts_path, :notice => "Account '#{account.Name}' was successfully deleted.")
   end
+
+  private
+
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_path, notice: "Please sign in."
+      end
+    end
 
 end 
