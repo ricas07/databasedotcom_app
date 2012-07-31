@@ -21,15 +21,7 @@ class AccountsController < ApplicationController
   end
 
   def index
-  #@accounts = Account.all
-    #def self.search(search)
-      if params[:search]
-        @accounts = Account.find_by_Name(:all, :conditions => ['Name LIKE ?', "%#{search}%"])
-      else
-        @accounts = Account.all
-      end
-    #end
-
+    @accounts = Account.all
     account = Account.find(params[:id])
     @account_owner = SFDC_Models::User.find_by_id("#{account.OwnerId}")
   end
