@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  #include Databasedotcom::Rails::Controller
+  include Databasedotcom::Rails::Controller
 
   def new
     @task = Task.new

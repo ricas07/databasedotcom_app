@@ -1,8 +1,11 @@
 SampleApp::Application.routes.draw do
   resources :users
   resources :tasks
-  resources :wifis
+  # I shouldn't need this 
+  #resources :wifis
+  
   resources :wifi__cs
+  resources :venue__cs
   resources :accounts
   resources :sessions, only: [:new, :create, :destroy]
 
