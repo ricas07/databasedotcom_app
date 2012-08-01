@@ -5,6 +5,5 @@ module SFDC_Models
     client.authenticate :username => "ricas071340318457207@gmail.com", :password => "P@ssword1fgBfS3P0N5B97VQf2SfiW2Q8M"
 
 	client.sobject_module = "SFDC_Models"
-    client.materialize("User") 
-
+    client.materialize("User")
 end	

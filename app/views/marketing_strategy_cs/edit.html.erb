@@ -1,0 +1,38 @@
+<h1>Editing Marketing Strategy:</h1>
+<h2><%= @marketing_strategy.Name %></h2>
+
+<%= form_for @marketing_strategy do |f| %>
+    <div class="field">
+        <%= f.label :Name %><br />
+        <%= f.text_field :Name %>
+    </div>
+    <div class="field">
+        <%= f.label :What_benefits_can_your_venue_provide_to__c %><br />
+        <%= f.text_field :What_benefits_can_your_venue_provide_to__c %>
+    </div>
+    <div class="field">
+        <%= f.label :How_is_your_company_currently_perceived__c %><br />
+        <%= f.text_field :How_is_your_company_currently_perceived__c %>
+    </div>
+    <div class="field">
+        <%= f.label :What_are_your_key_brand_attributes__c %><br />
+        <%= f.text_field :What_are_your_key_brand_attributes__c %>
+    </div>
+    <div class="field">
+        <%= f.label :Do_you_want_to_incorporate_these_key_bra__c %><br />
+        <%= f.text_field :Do_you_want_to_incorporate_these_key_bra__c %>
+    </div>
+    <div class="field">
+        <%= f.label :What_s_the_primary_message_you_want_to_d__c %><br />
+        <%= f.text_field :What_s_the_primary_message_you_want_to_d__c %>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>
+
+<br/>
+
+<%= link_to 'Show', @marketing_strategy %> |
+<%= link_to 'Back', marketing_strategy__cs_path %> |
+<%= link_to 'Delete', @marketing_strategy, :confirm => 'Are you sure?', :method => :delete %>

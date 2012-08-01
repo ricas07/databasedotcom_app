@@ -28,7 +28,7 @@
 	<tr>
 	<td><%= link_to "#{account.Id}", account %></td>
 	<td><%= "#{account.Name}" %></td>
-	<td><%= SFDC_Models::User.find_by_id("#{account.OwnerId}").Name %></td>
+	<td><%# SFDC_Models::User.find_by_id("#{account.OwnerId}").Name %></td>
 	<td><%= "#{account.CreatedDate}" %></td>
 	<td><%= "#{account.LastModifiedDate}" %></td>
 	</tr>

@@ -1,13 +1,12 @@
 SampleApp::Application.routes.draw do
-  resources :users
-  resources :tasks
-  # I shouldn't need this 
-  #resources :wifis
-  
-  resources :wifi__cs
+  resources :sessions, only: [:new, :create, :destroy]
+
+  #Salesforce Objects
+  resources :marketing_strategy__cs
   resources :venue__cs
   resources :accounts
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :users
+  resources :tasks
 
   root to: 'static_pages#home'
 
