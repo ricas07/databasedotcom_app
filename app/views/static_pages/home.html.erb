@@ -1,9 +1,13 @@
 <div class="center hero-unit">
-  <h1>Welcome to my Sample App!</h1>
+  <h1>Salesforce Connected Sample App!</h1>
 
   <h2>
-    This is the home page for Ricardo's sample application. Sign up now to receive nothing!
+    This is the home page for sandbox Salesfoce application. Signin to use it.
   </h2>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  <%= link_to "Login", signin_path, class: "btn btn-large btn-primary" %>
+  <br />
+  <br />
+
+  <p>Don't have an account? <%= link_to "Create one now.", new_user_path %></p>
 </div>

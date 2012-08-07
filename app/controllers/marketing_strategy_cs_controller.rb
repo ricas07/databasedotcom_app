@@ -1,5 +1,6 @@
 class MarketingStrategyCsController < ApplicationController
   include Databasedotcom::Rails::Controller
+  before_filter :signed_in_user
     
     def index
       @marketing_strategys = Marketing_Strategy__c.all()[0..19]
@@ -39,4 +40,13 @@ class MarketingStrategyCsController < ApplicationController
       marketing_strategy__c.delete
       redirect_to(marketing_strategy__cs_path, :notice => "Marketing Strategy '#{marketing_strategy__c.Subject}' was successfully deleted.")
     end
+
+    private
+
+      def signed_in_user
+        unless signed_in?
+          store_location
+          redirect_to signin_path, notice: "Please sign in."
+        end
+      end
 end 

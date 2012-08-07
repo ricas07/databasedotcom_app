@@ -41,4 +41,13 @@ class TasksController < ApplicationController
     redirect_to(tasks_path, :notice => "Task '#{task.Subject}' was successfully deleted.")
   end
 
+  private
+
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_path, notice: "Please sign in."
+      end
+    end
+
 end 
