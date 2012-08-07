@@ -12,7 +12,7 @@ group :development do
   gem 'databasedotcom'
   gem 'databasedotcom-rails'
   gem 'faker', '1.0.1'
-  gem 'will_paginate', '3.0.3'
+  gem 'will_paginate', '~> 3.0'
   gem 'bootstrap-will_paginate', '0.0.6'
   
   # For Salesforce but this may not work... checking it out.
@@ -36,7 +36,7 @@ group :assets do
   gem 'uglifier', '1.2.3'
   gem 'bcrypt-ruby', '3.0.1'
   gem 'sass-rails',   '3.2.4'
-  gem 'will_paginate', '3.0.3'
+  gem 'will_paginate', '~> 3.0'
   gem 'bootstrap-will_paginate', '0.0.6'
 end
 
