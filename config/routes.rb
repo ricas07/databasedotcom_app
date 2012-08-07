@@ -4,6 +4,7 @@ SampleApp::Application.routes.draw do
   #Salesforce Objects
   resources :marketing_strategy__cs
   resources :venue__cs
+  resources :opportunities
   resources :accounts
   resources :users
   resources :tasks

@@ -1,0 +1,17 @@
+<h1>Editing Task  <%= @opportunity.Name %> </h1>
+
+<%= form_for @opportunity do |f| %>
+    <div class="field">
+        <%= f.label :Name %><br />
+        <%= f.text_field :Name %>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>
+
+<br/>
+
+<%= link_to 'Show', @opportunity %> |
+<%= link_to 'Back', opportunities_path %> |
+<%= link_to 'Delete', @opportunity, :confirm => 'Are you sure?', :method => :delete %>

@@ -1,0 +1,37 @@
+<% if flash[:notice] %>
+  <% flash[:notice] %><br/><br/>
+<% end %>
+
+<%= link_to 'New', new_opportunity_path(@opportunity) %> |
+<%= link_to 'Back', opportunities_path %> 	
+<br />
+<br />
+
+<!-- Search Box for Opportunities -->
+<%= form_tag opportunities_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<div class="row">
+<table class="table">
+<tr>
+	<th>Account ID</th>
+	<th>Subject</th>
+	<th>Account Owner</th>
+	<th>Created Date</th>
+	<th>Last Modified</th>
+</tr>
+<% @opportunities.each do |opportunity| %>
+	<tr>
+	<td><%= link_to "#{opportunity.Id}", opportunity %></td>
+	<td><%= "#{opportunity.Name}" %></td>
+	<td><%# SFDC_Models::User.find_by_id("#{opportunity.OwnerId}").Name %></td>
+	<td><%= "#{opportunity.CreatedDate}" %></td>
+	<td><%= "#{opportunity.LastModifiedDate}" %></td>
+	</tr>
+<% end %>
+</table>
+</div>
