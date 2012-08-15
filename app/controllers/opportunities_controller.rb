@@ -1,5 +1,5 @@
 class OpportunitiesController < ApplicationController
-  include Databasedotcom::Rails::Controller
+  #include Databasedotcom::Rails::Controller
   before_filter :signed_in_user
 
   def new
