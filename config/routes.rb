@@ -1,12 +1,13 @@
 SampleApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
-
+  resources :users
+  resources :microposts, only: [:create, :destroy]
+  
   #Salesforce Objects
   resources :marketing_strategy__cs
   resources :venue__cs
   resources :opportunities
   resources :accounts
-  resources :users
   resources :tasks
 
   root to: 'static_pages#home'
