@@ -1,6 +1,10 @@
 SampleApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :microposts, only: [:create, :destroy]
   
   #Salesforce Objects
