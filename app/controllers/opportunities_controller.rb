@@ -3,7 +3,8 @@ class OpportunitiesController < ApplicationController
   before_filter :signed_in_user
 
   def new
-    @opportunity = Opportunity.new
+      @opportunity = Opportunity.new
+      @opportunity.AccountId = (params[:AccountId])
   end
 
   def create

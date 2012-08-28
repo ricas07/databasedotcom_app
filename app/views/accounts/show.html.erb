@@ -1,7 +1,8 @@
 <h1>Account <%= @account.Name %></h1>
 
 <%= link_to 'Edit', edit_account_path %> |
-<%= link_to 'Back', accounts_path %>
+<%= link_to 'Back', accounts_path %> |
+<%= link_to 'Create Opportunity', new_opportunity_path(:AccountId => "#{@account.Id}" ) %>
 <br/>
 <br/>
 <table class="table">
@@ -10,8 +11,10 @@
 		<th>Value</th>
 	</tr>
 <% @account.attributes.each do |a| %>
+<% @accountid = @account.Id %>
     <tr>
     	<td><%= a[0] %>:</td><td><%= a[1] %></td>
     </tr>
 <% end %>
+<%= @accountid %>
 </table>
