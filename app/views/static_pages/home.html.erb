@@ -1,9 +1,21 @@
 <% if signed_in? %>
+  
   <div class="row">
     <aside class="span4">
       <section>
         <%= render 'shared/user_info' %>
       </section>
+  
+    <section>
+      <h2>Salesforce Objects</h2>
+      <ul>
+        <li><a href="<%= accounts_path %>">Accounts</a></li>
+        <li><a href="<%= opportunities_path %>">Opportunities</a></li>
+        <li><a href="<%= tasks_path %>">Tasks</a></li>
+        <li><a href="<%= marketing_strategy__cs_path %>">Marketing Strategies</a></li>
+      </ul>
+    </section>
+  <!-- this is not for here....
       <section>
         <%= render 'shared/stats' %>
       </section>
@@ -14,7 +26,8 @@
     <div class="span8">
       <h3>Micropost Feed</h3>
       <%= render 'shared/feed' %>
-    </div>
+    </div>  
+  -->
   </div>
 <% else %>
   <div class="center hero-unit">
@@ -30,5 +43,5 @@
                                 class: "btn btn-large btn-primary" %>
   </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+  <% link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 <% end %> 
