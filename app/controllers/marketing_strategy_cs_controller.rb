@@ -1,6 +1,6 @@
 class MarketingStrategyCsController < ApplicationController
   include Databasedotcom::Rails::Controller
-  before_filter :signed_in_user
+  before_filter :signed_in_user, except: [:new, :create, :edit, :update]
     
     def index
       @marketing_strategys = Marketing_Strategy__c.all()[0..19]
@@ -12,6 +12,7 @@ class MarketingStrategyCsController < ApplicationController
 
     def new
       @marketing_strategy = Marketing_Strategy__c.new
+      @marketing_strategy.Account__c = (params[:AccountId])
     end
 
     def create
@@ -21,7 +22,7 @@ class MarketingStrategyCsController < ApplicationController
       #marketing_strategy__c.RecordTypeId = "012E0000000Q0WVIA0"
       #marketing_strategy__c.RecordType = "Account"
         if (marketing_strategy__c.save)
-          redirect_to(marketing_strategy__cs_path, :notice => "Marketing Strategy was successfully created.")
+          redirect_to( edit_marketing_strategy__c_path, :notice => "Marketing Strategy was successfully created.")
         end
     end  
 

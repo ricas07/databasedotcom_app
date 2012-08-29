@@ -6,6 +6,10 @@
         <%= f.text_field :Subject %>
     </div>
     <div class="field">
+        <%= f.label :AccountId %><br />
+        <%= f.text_field :AccountId %>
+    </div>
+    <div class="field">
         <%= f.label "Status" %>
         <%= f.select :Status, options_for_select([['Not Started', 'Not Started'], ['In Progress', 'In Progress'], ['Completed','Completed']]) %>
     </div>
