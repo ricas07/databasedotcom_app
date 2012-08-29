@@ -22,7 +22,7 @@ class MarketingStrategyCsController < ApplicationController
       #marketing_strategy__c.RecordTypeId = "012E0000000Q0WVIA0"
       #marketing_strategy__c.RecordType = "Account"
         if (marketing_strategy__c.save)
-          redirect_to( edit_marketing_strategy__c_path, :notice => "Marketing Strategy was successfully created.")
+          redirect_to( root_path, :notice => "Marketing Strategy was successfully created.")
         end
     end  
 

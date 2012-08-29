@@ -14,7 +14,7 @@ class OpportunitiesController < ApplicationController
     #opportunity.Priority = "Normal"
     user = SFDC_Models::User.first
     opportunity.OwnerId = user.Id
-    opportunity.StageName = "Prospecting"
+    #opportunity.StageName = "Prospecting"
     opportunity.IsPrivate = false
     opportunity.CloseDate = Time.now + 30
     # opportunity.RecordTypeId = "012E0000000Q0WVIA0"
