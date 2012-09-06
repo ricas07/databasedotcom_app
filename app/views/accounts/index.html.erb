@@ -8,16 +8,49 @@
 <br />
 
 <!-- Search Box for Accounts -->
-<%= form_tag accounts_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
+<form action="<%= accounts_path %>">
+	<label for="search_id">ID:</label>
+	<input type="text" name="Id" id="search_id" value="<%= @account.Id%>" />
+	<input type="submit" value="Search" />
+</form>
+
+<form action="<%= accounts_path %>">
+	<label for="search_name">Name:</label>
+	<input type="text" name="Name" id="search_id" value="<%= @account.Name%>" />
+	<input type="submit" value="Search" />
+</form>
 
 <div class="row">
+
+<table class="table">
+<% if @account.Id != nil %>
+<h2>Selected Account</h2>
+<tr>
+	<th>Account ID</th>
+	<th>Subject</th>
+	<th>Account Owner</th>
+	<th>Created Date</th>
+	<th>Last Modified</th>
+</tr>
+<tr>
+	<td><%= link_to "#{@account.Id}", @account %></td>
+	<td><%= "#{@account.Name}" %></td>
+	<td></th>
+	<td><%= "#{@account.CreatedDate}" %></td>
+	<td><%= "#{@account.LastModifiedDate}" %></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</th>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
+</table>
+<% end %>
 <table class="table">
 <tr>
+	<h2>All Accounts</h2>
 	<th>Account ID</th>
 	<th>Subject</th>
 	<th>Account Owner</th>
