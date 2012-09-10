@@ -36,11 +36,11 @@ group :assets do
   gem 'uglifier', '1.2.3'
   gem 'bcrypt-ruby', '3.0.1'
   gem 'sass-rails',   '3.2.4'
-  gem 'will_paginate', '~> 3.0'
-  gem 'bootstrap-will_paginate', '0.0.6'
 end
 
 gem 'jquery-rails', '2.0.0'
+gem 'will_paginate', '~> 3.0'
+gem 'bootstrap-will_paginate', '0.0.6'
 
 # Test gems on Linux
 group :test do
