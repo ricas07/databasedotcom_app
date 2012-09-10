@@ -22,12 +22,14 @@ class AccountsController < ApplicationController
 
   def index
     @accounts = Account.all
-    @account = Account.find(params[:Id])
-    #@account = Account.find_by_Name(params[:Name])
+    #This is a horrible way to hack the search bar. Looks like it can't issue a blank request, so I have to set the :Name param to something on the initial load. Once it load any other name or id can be entered. This shouldn't be so difficult, I just can't waste the time on it right now. :(
+    @name_hack = Account.first.Name
     if params[:Name] == nil
-      params[:Name] = 'n'
+      params[:Name] = @name_hack
     end
-
+    #end hack
+    @account = Account.find(params[:Id])
+    @account = Account.find_by_Name(params[:Name])
   end
 
   def show  
