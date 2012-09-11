@@ -3,7 +3,7 @@ class MarketingStrategyCsController < ApplicationController
   before_filter :signed_in_user, except: [:new, :create, :edit, :update]
     
     def index
-      @marketing_strategys = Marketing_Strategy__c.all()[0..19]
+      @marketing_strategys = Marketing_Strategy__c.all()[0..9]
     end
 
     def show
@@ -19,8 +19,6 @@ class MarketingStrategyCsController < ApplicationController
       marketing_strategy__c = Marketing_Strategy__c.new(params[:marketing_strategy__c])
       user = SFDC_Models::User.first
       marketing_strategy__c.OwnerId = user.Id
-      #marketing_strategy__c.RecordTypeId = "012E0000000Q0WVIA0"
-      #marketing_strategy__c.RecordType = "Account"
         if (marketing_strategy__c.save)
           redirect_to( root_path, :notice => "Marketing Strategy was successfully created.")
         end

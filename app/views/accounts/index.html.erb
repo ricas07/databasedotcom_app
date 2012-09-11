@@ -22,22 +22,22 @@
 
 <div class="row">
 
-<table class="table">
+<table class="table table-bordered">
 <% if @account.Id != nil %>
 <h2>Selected Account</h2>
 <tr>
 	<th>Account ID</th>
 	<th>Subject</th>
-	<th>Account Owner</th>
 	<th>Created Date</th>
 	<th>Last Modified</th>
+	<th>Last Modified By</th>
 </tr>
 <tr>
 	<td><%= link_to "#{@account.Id}", @account %></td>
 	<td><%= "#{@account.Name}" %></td>
-	<td></th>
-	<td><%= "#{@account.CreatedDate}" %></td>
-	<td><%= "#{@account.LastModifiedDate}" %></td>
+	<td><%= "#{@account.CreatedDate.to_formatted_s(:short)}" %></td>
+	<td><%= "#{@account.LastModifiedDate.to_formatted_s(:short)}" %></td>
+	<td><%= SFDC_Models::User.find("#{@account.LastModifiedById}").Name %></td>
 </tr>
 <tr>
 	<td>&nbsp;</td>
@@ -48,22 +48,22 @@
 </tr>
 </table>
 <% end %>
-<table class="table">
+<table class="table table-bordered">
 <tr>
 	<h2>Recent Accounts</h2>
 	<th>Account ID</th>
 	<th>Subject</th>
-	<th>Account Owner</th>
 	<th>Created Date</th>
 	<th>Last Modified</th>
+	<th>Last Modified By</th>
 </tr>
 <% @accounts.each do |account| %>
 	<tr>
 	<td><%= link_to "#{account.Id}", account %></td>
 	<td><%= "#{account.Name}" %></td>
-	<td><%# SFDC_Models::User.find_by_id("#{account.OwnerId}").Name %></td>
-	<td><%= "#{account.CreatedDate}" %></td>
-	<td><%= "#{account.LastModifiedDate}" %></td>
+	<td><%= "#{account.CreatedDate.to_formatted_s(:short)}" %></td>
+	<td><%= "#{account.LastModifiedDate.to_formatted_s(:short)}" %></td>
+	<td><%= SFDC_Models::User.find("#{account.LastModifiedById}").Name %></td>
 	</tr>
 <% end %>
 </table>
