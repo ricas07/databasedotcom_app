@@ -21,10 +21,9 @@ class AccountsController < ApplicationController
   end
 
   def index
-    @accounts = Account.all
+    @accounts = Account.all()[0..4].sort{ |a,b| a.LastModifiedDate <=> b.LastModifiedDate }.reverse
     
-
-    #This is a horrible way to hack the search bar. Looks like it can't issue a blank request, so I have to set the :Name param to something on the initial load. Once it load any other name or id can be entered. This shouldn't be so difficult, I just can't waste the time on it right now. :(
+    #This is a horrible way to hack the search bar. Looks like it can't issue a blank request, so I have to set the :Name param to something on the initial load. Once it load any other name or id can be entered. This shouldn't be so difficult, I just can't waste the time on it right now. 
     @name_hack = Account.first.Name
     if params[:Name] == nil and params[:Id] == nil
       params[:Name] = @name_hack
