@@ -39,15 +39,10 @@
 	<td><%= "#{@account.LastModifiedDate.to_formatted_s(:short)}" %></td>
 	<td><%= SFDC_Models::User.find("#{@account.LastModifiedById}").Name %></td>
 </tr>
-<tr>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</th>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-</tr>
 </table>
+
 <% end %>
+
 <table class="table table-bordered">
 <tr>
 	<h2>Recent Accounts</h2>

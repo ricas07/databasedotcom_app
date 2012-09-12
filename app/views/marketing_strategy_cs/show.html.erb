@@ -1,5 +1,6 @@
 <h1>Marketing Strategy:<h1/>
 <h2><%= @marketing_strategy.Name %></h2>
+<h2>For Account: <%= Account.find("#{@marketing_strategy.Account__c}").Name %> </h2>
 
 <%= link_to 'Edit', edit_marketing_strategy__c_path %> |
 <%= link_to 'Back', marketing_strategy__cs_path %>

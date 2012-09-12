@@ -45,6 +45,7 @@ class AccountsController < ApplicationController
 
   def show  
     @account = Account.find(params[:id]) 
+    @marketing_strategy = Marketing_Strategy__c.find_by_Account__c("#{@account.Id}")
   end
 
   def edit

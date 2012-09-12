@@ -1,5 +1,6 @@
 <h1>Editing Marketing Strategy:</h1>
 <h2><%= @marketing_strategy.Name %></h2>
+<h2>For Account: <%= Account.find("#{@marketing_strategy.Account__c}").Name %> </h2>
 
 <%= form_for @marketing_strategy do |f| %>
     <div class="field">
