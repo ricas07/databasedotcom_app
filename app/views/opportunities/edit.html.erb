@@ -1,4 +1,6 @@
 <h1>Editing Task  <%= @opportunity.Name %> </h1>
+<h2>For Account: <%= Account.find("#{@opportunity.AccountId}").Name %> </h2>
+
 
 <%= form_for @opportunity do |f| %>
     <div class="field">

@@ -1,4 +1,6 @@
 <h1>Create opportunity</h1>
+<h2>For Account: <%= Account.find("#{@opportunity.AccountId}").Name %> </h2>
+
 
 <%= form_for @opportunity do |f| %>
     <div class="field">
@@ -21,7 +23,6 @@
         <%= f.submit %>
     </div>
 <% end %>
-<%= @accountid %>
 
 <br/>
 
