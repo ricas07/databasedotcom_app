@@ -7,30 +7,18 @@
         <%= @user.name %>
       </h1>
     </section>
-    <!-- this is not for here.... 
-    <section>
-      <%= render 'shared/stats' %>
-    </section>
   </aside>
-  <div class="span8">
-    <%= render 'follow_form' if signed_in? %>
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
-    <% end %>
-  </div> -->
- 
+  
   <section>
-  	<h2>Salesforce Objects</h2>
-  	<ul>
-  		<li><a href="<%= accounts_path %>">Accounts</a></li>
-      <li><a href="<%= opportunities_path %>">Opportunities</a></li>
-  		<li><a href="<%= tasks_path %>">Tasks</a></li>
-  		<li><a href="<%= marketing_strategy__cs_path %>">Marketing Strategies</a></li>
-  	</ul>
-  </section>
+      <h2>Salesforce Objects</h2>
+      
+      <div class="options">
+        <a href="<%= accounts_path %>" class="btn">Accounts</a>
+        <a href="<%= opportunities_path %>" class="btn">Opportunities</a>
+        <a href="<%= tasks_path %>" class="btn">Tasks</a>
+        <a href="<%= marketing_strategy__cs_path %>" class="btn">Marketing Strategies</a>
+      </div>
+      
+    </section>
 
 </div>
