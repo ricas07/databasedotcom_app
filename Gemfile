@@ -38,7 +38,7 @@ group :assets do
   gem 'sass-rails',   '3.2.4'
 end
 
-gem 'jquery-rails', '~>2.0.0'
+gem 'jquery-rails'
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate', '0.0.6'
 
