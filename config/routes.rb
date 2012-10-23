@@ -15,6 +15,11 @@ SampleApp::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  #For Salesforce Self Service Portal Login
-  match '/self_service', to: 'static_pages#self_service'
+  #Routes for Self Service Pages
+  namespace :self_service do
+    match '', :action => 'home'
+    get 'solution'
+    get 'submit'
+    get 'view'
+  end
 end

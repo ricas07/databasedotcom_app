@@ -1,0 +1,29 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body {  font-family: "Open Sans", sans-serif;  }
+
+table {
+	width:900px;
+	border-top:solid black 1px;
+	border-bottom:solid black 1px;
+	margin:0 auto;
+}
+
+td.menuBarFrame {
+	text-align:center;
+	padding:5px;
+}
+
+td.menuBarFrame a {
+	color:#999;
+	padding:0 20px;
+}
+
+td.pageTitle {
+	font-weight: bold;
+	font-size:125%;
+	color:#999;
+}

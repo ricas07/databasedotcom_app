@@ -1,0 +1,47 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body {  font-family: "Open Sans", sans-serif;  }
+
+table {
+	width:800px;
+	border-top:solid #999 1px;
+	border-bottom:solid #999 1px;
+	margin:0 auto;
+	font-size: 15px;
+}
+
+td.menuBarFrame {
+	text-align:center;
+	padding:5px;
+}
+
+td.menuBarFrame a {
+	color:#999;
+	padding:0 20px;
+	font-weight:bold;
+	font-size: 17px;
+}
+
+td.pageTitle {
+	font-weight: bold;
+	font-size:125%;
+}
+
+td.titleInfo {
+	font-size:13px;
+}
+
+td.listHeading {
+	color:#999;
+	font-weight:bold;
+}
+
+img.logo {
+	visibility:hidden;
+	padding:20px;
+	background: url('http://www.r66t.com/images/aboutR66T-icons-centered-2.png');
+	background-position: -10px -10px;
+}
