@@ -39,9 +39,7 @@ td.listHeading {
 	font-weight:bold;
 }
 
-img.logo {
+a img.logo {
 	visibility:hidden;
-	padding:20px;
-	background: url('http://www.r66t.com/images/aboutR66T-icons-centered-2.png');
-	background-position: -10px -10px;
+	
 }
