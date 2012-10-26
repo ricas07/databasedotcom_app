@@ -39,6 +39,15 @@ td.listHeading {
 	font-weight:bold;
 }
 
+td.listEntryOdd, td.listEntryEven {
+	padding:10px 0;
+}
+
+td.listEntryOdd{
+	background-color: #E0E0E0;
+}
+
+/*To hide salesforce logo */
 a img.logo {
 	visibility:hidden;
 	

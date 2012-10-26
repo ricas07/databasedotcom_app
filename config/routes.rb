@@ -17,9 +17,11 @@ SampleApp::Application.routes.draw do
 
   #Routes for Self Service Pages
   namespace :self_service do
-    match '', :action => 'home'
+    match '', :action => 'login'
+    get 'home'
     get 'solution'
     get 'submit'
     get 'view'
+    get 'web_to_case'
   end
 end
