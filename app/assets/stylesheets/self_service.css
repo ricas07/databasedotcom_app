@@ -19,7 +19,6 @@ td.menuBarFrame {
 }
 
 td.menuBarFrame a {
-	color:#999;
 	padding:0 20px;
 	font-weight:bold;
 	font-size: 17px;
@@ -35,7 +34,6 @@ td.titleInfo {
 }
 
 td.listHeading {
-	color:#999;
 	font-weight:bold;
 }
 
@@ -50,5 +48,23 @@ td.listEntryOdd{
 /*To hide salesforce logo */
 a img.logo {
 	visibility:hidden;
-	
+}
+
+/* iframe test */
+div.iframe_container {
+	height:100%;
+	width:100%;
+	text-align: center;
+}
+
+div.self_service iframe {
+	min-height: 600px;
+	min-width: 600px;
+	border: none;
+}
+
+div.public_solutions iframe {
+	min-height: 600px;
+	min-width: 800px;
+	border: none;
 }

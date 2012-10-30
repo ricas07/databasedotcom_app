@@ -21,7 +21,10 @@ SampleApp::Application.routes.draw do
     get 'home'
     get 'solution'
     get 'submit'
+    get 'cases'
     get 'view'
     get 'web_to_case'
+    get 'iframe'
+    get 'public_solutions'
   end
 end
