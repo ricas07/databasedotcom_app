@@ -1,17 +1,21 @@
-<FORM ACTION="https://na9.salesforce.com/sserv/login.jsp" METHOD="POST">
-<INPUT TYPE="HIDDEN" NAME="orgId" VALUE="00DE0000000KLG6">
+<div class="row">
+	<div class="span6 offset3">
+		<form action="https://na9.salesforce.com/sserv/login.jsp" method="post">
+			<input type="hidden" name="orgid" value="00de0000000klg6">
 
-<label for="un">Username:</label>
-<INPUT TYPE="TEXT" id="un" NAME="un">
-<BR>
+			<label for="un">Username:</label>
+			<input type="text" id="un" name="un">
+			<br>
 
-<label for="pw">Password:</label>
-<INPUT TYPE="PASSWORD" id="pw" NAME="pw">
-<BR>
-</FORM>
-<!-- INPUT TYPE="SUBMIT" VALUE="Login"> -->
+			<label for="pw">Password:</label>
+			<input type="password" id="pw" name="pw">
+			<br>
+			<!-- Removed this since this is just a demo, I don't want it to actually login to our portal. 
+			<input type="submit" value="login"> 
+			-->
+		</form>
 
-<form action="/self_service/home"><input type="submit" value="Go!"></form>
 
-
-  
+		<form action="/self_service/home"><input type="submit" value="Go!"></form>
+	</div>
+</div>  
