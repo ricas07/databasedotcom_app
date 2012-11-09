@@ -63,6 +63,12 @@ td.listEntryOdd{
 	background-color: #E0E0E0;
 }
 
+td.error {
+  color:red;
+  font-style:italic;
+  font-size:80%;
+}
+
 /*To hide salesforce logo */
 a img.logo {
 	visibility:hidden;
