@@ -164,7 +164,7 @@ input[type="file"]:focus, input[type="checkbox"]:focus, select:focus {
   outline-offset: -2px;
 }
 
-input[type="submit"] {
+input[type="submit"], input[type="button"], select {
   background-color: #006ccc;
   background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
   background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
@@ -204,7 +204,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:active {
+input[type="submit"]:active, input[type="button"]:active {
   background-image: none;
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
