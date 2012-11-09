@@ -6,8 +6,6 @@
 body {  font-family: "Open Sans", sans-serif;  }
 
 table {
-	/*width:800px;*/
-	border-top:solid #999 1px;
 	border-bottom:solid #999 1px;
 	margin:0 auto;
 	font-size: 15px;
@@ -38,13 +36,14 @@ td.menuBarFrame a {
 	font-size: 17px;
 }
 
-td.pageTitle {
+td.pageTitle, td.solutionTitleDetail {
 	font-weight: bold;
 	font-size:125%;
 }
 
 td.titleInfo {
 	font-size:13px;
+  text-align:right;
 }
 
 td.listHeading {
@@ -60,7 +59,7 @@ td.listEntryOdd, td.listEntryEven {
 }
 
 td.listEntryOdd{
-	background-color: #E0E0E0;
+	background-color: #F0F0F0;
 }
 
 td.error {
