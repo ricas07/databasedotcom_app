@@ -224,3 +224,15 @@ input[type="submit"]:active, input[type="button"]:active {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   color: white;
 }
+
+input[type="submit"]:hover, input[type="button"]:hover {
+  color: #333;
+  text-decoration: none;
+  background-color: #E6E6E6;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
