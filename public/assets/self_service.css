@@ -3,12 +3,15 @@
 	padding:0;
 }
 
-body {  font-family: "Open Sans", sans-serif;  }
+body {  
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;  
+}
 
 table {
 	border-bottom:solid #999 1px;
 	margin:0 auto;
-	font-size: 15px;
+  font-size: 14px;
 }
 
 tr, td {
@@ -33,7 +36,7 @@ td.menuBarFrame {
 td.menuBarFrame a {
 	padding:0 20px;
 	font-weight:bold;
-	font-size: 17px;
+	font-size: 16px;
 }
 
 td.pageTitle, td.solutionTitleDetail {
@@ -82,7 +85,7 @@ div.iframe_container {
 
 div.self_service iframe {
 	min-height: 800px;
-	min-width: 650px;
+	min-width: 700px;
 	border: none;
 }
 
