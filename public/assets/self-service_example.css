@@ -1,0 +1,157 @@
+	.text  {
+	  font-size : 10pt;
+	}
+	.error  {
+	  font-size : 10pt;
+	  color : #FF0000;
+	}
+	body {
+		COLOR: #000000; BACKGROUND-COLOR: #FFFFFF; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-DECORATION: none
+	}
+	TEXTAREA {
+		FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 11px;
+	}	
+	TD {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+	}
+	SPAN {
+	}
+	.btn,.button {
+		padding:0;margin:0;BACKGROUND-COLOR: #FFFFFF; COLOR: #0000FF; font-family: sans-serif,tahoma,arial,verdana; FONT-SIZE: 8pt;; FONT-WEIGHT: bold; TEXT-DECORATION: none;
+		<!--[if IE]>
+		width:1px;
+    	overflow:visible;
+    	<![endif]-->
+	}	
+	.bodyStd {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+	}
+	.bodyBold {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+	}
+	.titleInfo {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; 
+	}
+	.titleHeaderLineTop {
+		BACKGROUND-COLOR: #000000;
+	}
+	.titleHeaderLineBottom {
+		BACKGROUND-COLOR: #000000;
+	}
+	td.pageTitle {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold;
+	}
+	.pageDescription {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; 
+	}
+	.solutionMatch {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none;
+	}	
+	.solutionTitleList {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 13px; FONT-WEIGHT: bold; TEXT-DECORATION: underline;
+	}
+	.solutionTitleDetail {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 13px; FONT-WEIGHT: bold; TEXT-DECORATION: none;
+	}
+	.solutionBodyDetail {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-DECORATION: none;
+	}
+	.solutionQuestion {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none;
+	}	
+
+
+	/*  Categories Styles  */
+	.categoryTitleAlignment{
+		TEXT-ALIGN: CENTER;
+    }
+    
+    .newPageHeader {
+    	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: underline;
+    }
+	
+	A.categoryNode {
+	   COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: underline;
+    }
+	
+	A.categorySubNode {
+	   COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: normal; TEXT-DECORATION: underline;
+	}
+	
+	.categoryBackground {
+		BACKGROUND-COLOR: #EEEEEE;
+	}
+    
+    .categoryHeader {
+    	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none;
+    }
+    
+    .categoryHeaderColor {
+    	BACKGROUND-COLOR: #CCCCCC;
+    }
+    
+    .categorySectionLines {
+		BACKGROUND-COLOR: #000000;
+	}
+
+ /* End Categories Styles  */
+	img{
+		border:0;
+	}
+	.listTitle {
+		BACKGROUND-COLOR: #FFFFFF; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+	}
+	.listHeaderLine {
+		BACKGROUND-COLOR: #000000;
+	}
+	.listFooterLine {
+		BACKGROUND-COLOR: #FFFFFF;
+	}
+	.listHeading {
+		BACKGROUND-COLOR: #FFFFFF; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+	}
+	.listEntryOdd {
+		BACKGROUND-COLOR: #FFFFFF; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-DECORATION: none
+	}
+	.listEntryEven {
+		BACKGROUND-COLOR: #FFFFFF; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-DECORATION: none
+	}
+	.editLabel {
+		BACKGROUND-COLOR: #FFFFFF; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-DECORATION: none
+	}
+	.detailLabel {
+		BACKGROUND-COLOR: #FFFFFF; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 13px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+	}
+	.editData {
+		BACKGROUND-COLOR: #FFFFFF; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+	}
+	.detailData {
+		BACKGROUND-COLOR: #FFFFFF; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-DECORATION: none
+	}
+	.requiredSymbol {
+		COLOR: #990000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+	}
+	.errorMsg {
+		COLOR: #990000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+	}
+	.blackLine {
+		BACKGROUND-COLOR: #000000;
+	}
+ 	.searchPrompt {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+	}
+	.searchTipsHeader {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+	}
+	.searchTips {
+		COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+	}
+	.searchTextBox, select{
+		FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 11px;
+	}
+	h1, h2, h3, h4, h5, h6 {
+	display: inline;
+	width:100%;
+	font-size:1em;
+	margin: 0;
+	}	
