@@ -1,0 +1,29 @@
+<h1>Account <%= @account.Name %></h1>
+
+<%= link_to 'Edit', edit_account_path, :class => 'btn' %> |
+<%= link_to 'Create an Opportunity for this Account', new_opportunity_path(:AccountId => "#{@account.Id}" ), :class => 'btn' %> |
+<% if @marketing_strategy == nil %>
+
+<%= link_to 'Add Marketing Strategy Info', new_marketing_strategy__c_path(:AccountId => "#{@account.Id}" ), :class => 'btn' %> |
+
+<% else %>
+
+<%= link_to 'View/Update Marketing Strategy Info', @marketing_strategy, :class => 'btn' %>
+
+<% end %>
+<%= link_to 'Back', accounts_path, :class => 'btn' %>
+<br/>
+<br/>
+<table class="table">
+	<tr>
+		<th>Attribute</th>
+		<th>Value</th>
+	</tr>
+<% @account.attributes.each do |a| %>
+
+    <tr>
+    	<td><%= a[0] %>:</td><td><%= a[1] %></td>
+    </tr>
+<% end %>
+
+</table>

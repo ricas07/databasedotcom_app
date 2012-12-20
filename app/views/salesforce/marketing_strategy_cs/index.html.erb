@@ -1,0 +1,31 @@
+<% if flash[:notice] %>
+  <% flash[:notice] %><br/><br/>
+<% end %>
+
+<h1>Marketing Strategies</h1>
+
+<%= link_to 'New', new_marketing_strategy__c_path(@marketing_strategy) %> |
+<%= link_to 'Back', marketing_strategy__cs_path %> 	
+<br/>
+<br/>
+
+<table class="table">
+<tr>
+	<th>ID</th>
+	<th>Name</th>
+	<th>Owner</th>
+	<th>Created Date</th>
+	<th>Last Modified</th>
+</tr>
+
+<% @marketing_strategys.each do |marketing_strategy| %>
+<tr>
+	<td><%= link_to "#{marketing_strategy.Id}", marketing_strategy %></td>
+	<td><%= "#{marketing_strategy.Name}" %></td>
+	<td><%# SFDC_Models::User.find_by_id("#{marketing_strategy.OwnerId}").Name %></td>
+	<td><%= "#{marketing_strategy.CreatedDate}" %></td>
+	<td><%= "#{marketing_strategy.LastModifiedDate}" %></td>
+</tr>
+<% end %>
+</table>
+</ul>

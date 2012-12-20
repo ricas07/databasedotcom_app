@@ -1,0 +1,29 @@
+<h1>Create opportunity</h1>
+<h2>For Account: <%= Account.find("#{@opportunity.AccountId}").Name %> </h2>
+
+
+<%= form_for @opportunity do |f| %>
+    <div class="field">
+        <%= f.label :AccountId %><br />
+        <%= f.text_field :AccountId %>
+    </div>
+    <div class="field">
+        <%= f.label :Name %><br />
+        <%= f.text_field :Name %>
+    </div>
+    <div class="field">
+        <%= f.label :Description %><br />
+        <%= f.text_field :Description %>
+    </div>
+    <div class="field">
+        <%= f.label :StageName %><br />
+        <%= f.select :StageName, options_for_select([['Prospecting', 'Not Started'], ['Qualification', 'Qualification'], ['Needs Analysis','Needs Analysis']]) %>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>
+
+<br/>
+
+<%= link_to 'Back', opportunities_path %>

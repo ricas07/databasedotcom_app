@@ -1,0 +1,15 @@
+<h1>Create account</h1>
+
+<%= form_for @account do |f| %>
+    <div class="field">
+        <%= f.label :Name %><br />
+        <%= f.text_field :Name %>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>
+
+<br/>
+
+<%= link_to 'Back', accounts_path %>

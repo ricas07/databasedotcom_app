@@ -1,0 +1,25 @@
+<% if flash[:notice] %>
+  <% flash[:notice] %><br/><br/>
+<% end %>
+
+<%= link_to 'New', new_salesforce_task_path(@task) %> |
+<%= link_to 'Back', salesforce_tasks_path %> 	
+<br/>
+<br/>
+
+<div class="row">
+<table class="table">
+<tr>
+	<th>Task ID</th>
+	<th>Subject</th>
+	<th>Status</th>
+</tr>
+<% @tasks.each do |salesforce_task| %>
+<% if salesforce_task.Status != "Completed" %>
+	<tr>
+	<td><%= link_to "#{salesforce_task.Id}", salesforce_task_path %></td><td><%= "#{salesforce_task.Subject}" %></td><td><%= "#{salesforce_task.Status}" %></td>
+	</tr>
+<% end %>
+<% end %>
+</table>
+</div>
