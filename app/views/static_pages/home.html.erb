@@ -7,28 +7,23 @@
       </section>
   </div>
 
-      <section>
-      <h2>Salesforce Objects</h2>
-      
-      <div class="options">
-        <a href="<%= salesforce_accounts_path %>" class="btn">Accounts</a>
-        <a href="<%= salesforce_opportunities_path %>" class="btn">Opportunities</a>
-        <a href="<%= salesforce_tasks_path %>" class="btn">Tasks</a>
-        <a href="<%= salesforce_marketing_strategy__cs_path %>" class="btn">Marketing Strategies</a>
-      </div>
-      
-    </section>
+  <div class="center hero-unit">
+    <h1>pezzep</h1>
+
+    <h2>
+      Thanks for registering! <br />Project Showcase coming soon!
+    </h2>
+
+  </div>
 <% else %>
   <div class="center hero-unit">
     <h1>pezzep</h1>
 
     <h2>
-      Learn about our Web Services.
+      Register to learn about our Web Services.
     </h2>
 
     <%= link_to "Register now!", signup_path, 
                                 class: "btn btn-large btn-primary" %>
   </div>
-
-  <% link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 <% end %> 

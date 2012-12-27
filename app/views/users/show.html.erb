@@ -9,16 +9,16 @@
     </section>
   </aside>
   
-  <section>
-      <h2>Salesforce Objects</h2>
+  <div class="row">
+    <div class="span6 offset3">
+      <h2>Your Account</h2>
       
-      <div class="options">
-        <a href="<%= salesforce_accounts_path %>" class="btn">Accounts</a>
-        <a href="<%= salesforce_opportunities_path %>" class="btn">Opportunities</a>
-        <a href="<%= salesforce_tasks_path %>" class="btn">Tasks</a>
-        <a href="<%= salesforce_marketing_strategy__cs_path %>" class="btn">Marketing Strategies</a>
-      </div>
+      <ul>
+        <li><%= @user.name %></li>
+        <li><%= @user.email %></li>
+      </ul>
       
-    </section>
+    </div>  
+  </div>
 
 </div>
