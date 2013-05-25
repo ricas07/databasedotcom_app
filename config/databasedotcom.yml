@@ -4,4 +4,4 @@ client_id: 3MVG9y6x0357Hledlw0Op2Vcbey_xXD3gqwk.D9ApXFeNioQCOda082RjQegBOrMyJ4Ci
 #sobject_module: SFDC_Models       # This is not needed since we are using the databasedotcom-rails gem.
 debugging: false                  # Can be useful while developing
 username: ricas071340318457207@gmail.com
-password: P@ssword7JLBoA1xCmLAKR3clwhGJoZ1P #Password plus token from salesforce
+password: pezzep0709fdl4aPqTzMxNN13QAVQi6g #Password plus token from salesforce
