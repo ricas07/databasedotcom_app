@@ -2,19 +2,19 @@
   <% flash[:notice] %><br/><br/>
 <% end %>
 
-<%= link_to 'New', new_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %> 	
+<%= link_to 'New', new_salesforce_account_path(@account) %> |
+<%= link_to 'Back', salesforce_accounts_path %> 	
 <br />
 <br />
 
 <!-- Search Box for Accounts -->
-<form action="<%= accounts_path %>">
+<form action="<%= salesforce_accounts_path %>">
 	<label for="search_id">ID:</label>
 	<input type="text" name="Id" id="search_id" value="<%= @account.Id%>" />
 	<input type="submit" value="Search" />
 </form>
 
-<form action="<%= accounts_path %>">
+<form action="<%= salesforce_accounts_path %>">
 	<label for="search_name">Name:</label>
 	<input type="text" name="Name" id="search_id" value="<%= @account.Name%>" />
 	<input type="submit" value="Search" />
@@ -33,11 +33,11 @@
 	<th>Last Modified By</th>
 </tr>
 <tr>
-	<td><%= link_to "#{@account.Id}", @account %></td>
+	<td><%= link_to "#{@account.Id}", @salesforce_account %></td>
 	<td><%= "#{@account.Name}" %></td>
 	<td><%= "#{@account.CreatedDate.to_formatted_s(:short)}" %></td>
 	<td><%= "#{@account.LastModifiedDate.to_formatted_s(:short)}" %></td>
-	<td><%= SFDC_Models::User.find("#{@account.LastModifiedById}").Name %></td>
+	<td><%# SFDC_Models::User.find("#{@account.LastModifiedById}").Name %></td>
 </tr>
 </table>
 
@@ -54,11 +54,11 @@
 </tr>
 <% @accounts.each do |account| %>
 	<tr>
-	<td><%= link_to "#{account.Id}", account %></td>
+	<td><%= link_to "#{account.Id}", @salesforce_account %></td>
 	<td><%= "#{account.Name}" %></td>
 	<td><%= "#{account.CreatedDate.to_formatted_s(:short)}" %></td>
 	<td><%= "#{account.LastModifiedDate.to_formatted_s(:short)}" %></td>
-	<td><%= SFDC_Models::User.find("#{account.LastModifiedById}").Name %></td>
+	<td><%# SFDC_Models::User.find("#{account.LastModifiedById}").Name %></td>
 	</tr>
 <% end %>
 </table>
