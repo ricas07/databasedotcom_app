@@ -38,9 +38,10 @@ group :assets do
   gem 'sass-rails',   '3.2.4'
 end
 
+# The application is loading tons of js files. The gems below may be the reason.
 gem 'jquery-rails'
-gem 'will_paginate', '~> 3.0'
-gem 'bootstrap-will_paginate', '0.0.6'
+#gem 'will_paginate', '~> 3.0'
+#gem 'bootstrap-will_paginate', '0.0.6'
 
 # Test gems on Linux
 group :test do

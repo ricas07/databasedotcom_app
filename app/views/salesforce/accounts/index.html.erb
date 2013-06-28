@@ -28,12 +28,12 @@
 <tr>
 	<th>Account ID</th>
 	<th>Subject</th>
-	<th>Created Date</th>
+	<th>Created Date</th>	
 	<th>Last Modified</th>
 	<th>Last Modified By</th>
 </tr>
 <tr>
-	<td><%= link_to "#{@account.Id}", @salesforce_account %></td>
+	<td><%= link_to "#{@account.Id}", salesforce_account_path(@account) %></td>
 	<td><%= "#{@account.Name}" %></td>
 	<td><%= "#{@account.CreatedDate.to_formatted_s(:short)}" %></td>
 	<td><%= "#{@account.LastModifiedDate.to_formatted_s(:short)}" %></td>
@@ -54,7 +54,7 @@
 </tr>
 <% @accounts.each do |account| %>
 	<tr>
-	<td><%= link_to "#{account.Id}", @salesforce_account %></td>
+	<td><%= link_to "#{account.Id}", salesforce_account_path(account) %></td>
 	<td><%= "#{account.Name}" %></td>
 	<td><%= "#{account.CreatedDate.to_formatted_s(:short)}" %></td>
 	<td><%= "#{account.LastModifiedDate.to_formatted_s(:short)}" %></td>

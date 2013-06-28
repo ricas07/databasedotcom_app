@@ -1,6 +1,6 @@
 <h1>Editing Task  <%= @account.Name %> </h1>
 
-<%= form_for @account do |f| %>
+<% form_for @account do |f| %>
     <div class="field">
         <%= f.label :Name %><br />
         <%= f.text_field :Name %>
@@ -12,6 +12,6 @@
 
 <br/>
 
-<%= link_to 'Show', @account %> |
-<%= link_to 'Back', accounts_path %> |
+<%= link_to 'Show', salesforce_account_path(@account) %> |
+<%= link_to 'Back', salesforce_accounts_path %> |
 <%= link_to 'Delete', @account, :confirm => 'Are you sure?', :method => :delete %>
